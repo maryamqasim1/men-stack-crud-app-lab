@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title><%= recipes.name %></title>
+  </head>
+  <body>
+    <i class="fa fa-arrow-left" onclick="location.href='./'"></i>
+    <h1> <%= recipes.name %></h1>
+    <p><%= recipes.description %></p>
+    <img src="<%= recipes.image %>" alt="food image" width="25%" height="25%"> <br><br>
+    <button onclick="location.href='/recipes/<%= recipes._id %>/edit'">Edit</button>
+    <form action="/recipes/<%= recipes._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>

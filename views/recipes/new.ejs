@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>Add Recipe</title>
+  </head>
+  <body>
+    <i class="fa fa-arrow-left" onclick="location.href='./'"></i>
+    <h1>Add New Recipe</h1>
+    <form action="/recipes" method="POST">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required/>
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea type="text" name="description" id="description" maxlength="200" required></textarea>
+      </div>
+      <div>
+        <label for="image">Image link:</label>
+        <input type="text" name="image" id="image" />
+      </div>
+      <button type="submit">Add</button>
+    </form>
+  </body>
+</html>

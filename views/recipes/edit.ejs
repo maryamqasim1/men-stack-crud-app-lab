@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>Edit</title>
+  </head>
+  <body>
+    <i class="fa fa-arrow-left" onclick="location.href='/recipes'"></i>
+    <h1>Edit <%= recipes.name %> Recipe</h1>
+    <form action="/recipes/<%= recipes._id %>?_method=PUT" method="POST">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= recipes.name %>" />
+      </div>
+      <div>
+        <label for="description">description:</label>
+        <textarea type="text" name="description" id="description" maxlength="100"><%=recipes.description%></textarea>
+      </div> <br>
+      <button type="submit">Edit</button>
+    </form>
+  </body>
+</html>
